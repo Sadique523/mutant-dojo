@@ -1,0 +1,6 @@
+.viewport-pose-tools { position:absolute; top:60px; left:18px; right:18px; display:flex; flex-wrap:wrap; align-items:center; gap:5px; z-index:3; font:9px/1.4 system-ui,sans-serif; color:#b0c9c4; }
+.viewport-pose-tools button { padding:7px 8px; border:1px solid #49645d; border-radius:3px; background:#102029e8; color:#c9ddd5; font:inherit; cursor:pointer; }
+.viewport-pose-tools button[aria-pressed=true] { color:#a9f0c6; border-color:#90caa5; background:#25483ce8; }
+.viewport-pose-tools label { display:flex; align-items:center; gap:3px; background:#102029bb; padding:4px; }
+.picked-joint { padding:5px 7px; color:#a9f0c6; background:#0c1b23bb; letter-spacing:.06em; }
+@media(max-width:900px) { .viewport-pose-tools { top:87px; } }

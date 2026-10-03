@@ -1,0 +1,19 @@
+.play-controls { display:flex; align-items:center; flex-wrap:wrap; gap:10px; font:10px/1.4 system-ui,sans-serif; letter-spacing:.08em; color:#a9bac5; }
+.play-controls .music-toggle { cursor:pointer; padding:7px 9px; background:#14222b; color:#c7dfd8; border:1px solid #38505b; border-radius:3px; font:inherit; white-space:nowrap; }
+.play-controls .music-toggle[aria-pressed="true"] { color:#8af0c1; border-color:#62ae91; }
+.play-controls .music-volume { display:flex; align-items:center; gap:5px; }
+.play-controls input { width:65px; accent-color:#6dcfa6; }
+.controller-status { font-size:9px; white-space:nowrap; }
+.toolbar { flex-wrap:wrap; justify-content:flex-end; }
+.bottomline { gap:12px; }
+.lab-header .header-note { display:none; }
+.lab-header .play-controls { margin:0 12px; }
+@media(max-width:900px) { .lab-header .controller-status { display:none; } .play-controls { gap:5px; } }
+.controller-dialog { width:min(660px,90vw); max-height:85vh; overflow:auto; background:#14212a; color:#d1e0e6; border:1px solid #49716b; border-radius:8px; padding:24px; font:13px/1.5 system-ui,sans-serif; }
+.controller-dialog::backdrop { background:#02070cc9; }
+.controller-heading { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.controller-heading h2 { margin:0; font-size:20px; }
+.controller-dialog button,.controller-dialog select { border:1px solid #54746f; border-radius:3px; padding:8px 12px; color:#d2e6dd; background:#20353a; cursor:pointer; }
+.pad-diagnostics { white-space:pre-wrap; overflow-wrap:anywhere; padding:12px; background:#09151b; color:#8fe3bb; font:11px/1.6 monospace; }
+.bind-actions { display:flex; gap:8px; flex-wrap:wrap; margin:16px 0; text-transform:capitalize; }
+.controller-help { color:#a2b4bf; font-size:12px; }

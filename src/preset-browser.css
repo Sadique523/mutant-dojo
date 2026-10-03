@@ -1,0 +1,11 @@
+.preset-browser { padding-bottom:20px; margin-bottom:20px; border-bottom:1px solid #3b5154; }
+.preset-browser h2 { color:#e6c892; font-size:19px; margin:0 0 8px; }
+.preset-browser select,.preset-browser button { border:1px solid #405d60; border-radius:3px; padding:7px; color:#c8dbd5; background:#15272e; font:10px system-ui,sans-serif; }
+.motion-preset-list { display:grid; grid-template-columns:1fr 1fr; gap:5px; max-height:245px; overflow-y:auto; }
+.motion-preset-list button { text-align:left; cursor:pointer; }
+.motion-preset-list button.active { color:#f4d79f; border-color:#bda66f; }
+.preset-description { font-size:10px; line-height:1.6; color:#a7bbb7; }
+.preset-references { display:grid; grid-template-columns:repeat(3,1fr); gap:5px; margin:10px 0; }
+.preset-references button { padding:3px; cursor:pointer; }
+.preset-references img { width:100%; height:95px; object-fit:contain; background:#eee; display:block; }
+.preset-references span { display:block; font-size:8px; padding:4px 0; }

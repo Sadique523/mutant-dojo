@@ -1,0 +1,11 @@
+.keyframe-editor { padding:0 0 22px; margin-bottom:22px; border-bottom:1px solid #344c4c; }
+.keyframe-editor h2 { margin:0 0 8px; font-size:19px; color:#c2e5cf; }
+.editor-row { display:flex; align-items:center; flex-wrap:wrap; gap:7px; margin:10px 0; font-size:11px; }
+.keyframe-editor button,.keyframe-editor select,.keyframe-editor input[type=number] { background:#152a30; color:#cbded8; border:1px solid #3c5658; border-radius:3px; padding:7px; font:10px system-ui,sans-serif; }
+.editor-row input[type=number] { width:70px; }
+.editor-transform { display:grid; grid-template-columns:56px repeat(3,minmax(0,1fr)); gap:5px; align-items:center; margin:10px 0; font-size:10px; color:#a4babd; }
+.editor-transform label { min-width:0; font-size:9px; }
+.editor-transform input { display:block; width:100%; margin-top:4px; }
+.key-list { display:flex; gap:5px; flex-wrap:wrap; padding:8px 0; min-height:32px; }
+.key-list .selected { color:#a6f2bb; border-color:#8fcc9d; }
+.editor-state { font-size:10px; color:#90c5b2; }
