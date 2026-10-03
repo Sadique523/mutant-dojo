@@ -13,6 +13,7 @@ json.buffers[0].uri='data:application/octet-stream;base64,'+b.subarray(offset+8,
 const asset=await new GLTFLoader().parseAsync(JSON.stringify(json),'');
 const model=createSkeletalCharacter(asset),fighter={x:0,y:0,facing:1,health:100,stun:0,speed:0,blocking:false};
 const output={};
+let rig;
 for(const name of ['idle','block','kick','spin-windup','spinKick','death','special-kick','special-turn','special-spin','special-land']) {
   fighter.blocking=name==='block';fighter.health=name==='death'?0:100;
   fighter.attack=['kick','spin-windup','spinKick'].includes(name)?{type:name==='kick'?'kick':'spinKick',duration:1,remaining:name==='spin-windup'?.88:.625,startup:.3,active:.15}:null;
@@ -24,6 +25,10 @@ for(const name of ['idle','block','kick','spin-windup','spinKick','death','speci
     for(let i=0;i<mesh.geometry.attributes.position.count;i++){mesh.getVertexPosition(i,v).applyMatrix4(mesh.matrixWorld);vertices.push([v.x,-v.z,v.y].map(n=>Math.round(n*100000)/100000));}
     objects.push({name:mesh.name,material:mesh.material.name,vertices,indices:Array.from(mesh.geometry.index?.array??vertices.map((_,i)=>i))});
   });output[name]=objects;
+  if(name==='idle'){
+    rig=[];model.source.traverse(bone=>{if(bone.isBone&&bone.parent?.isBone){const a=bone.getWorldPosition(new Vector3()),b=bone.parent.getWorldPosition(new Vector3());rig.push({name:bone.name,a:[a.x,-a.z,a.y],b:[b.x,-b.z,b.y]});}});
+  }
 }
 await writeFile(`art/${character}-game-pose-review.json`,JSON.stringify(output));
+await writeFile(`art/${character}-game-rig-review.json`,JSON.stringify(rig));
 console.log(`Exported ${character} runtime idle, block, kicks and death for Blender review.`);

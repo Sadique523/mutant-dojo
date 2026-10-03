@@ -27,6 +27,7 @@ art/game-pose-review.json
 art/game-pose-render.log
 art/raph-skeletal-build.log
 art/*-game-pose-review.json
+art/*-game-rig-review.json
 art/raph-pose-render.log
 art/vendor/
 art/mocap-review.log
